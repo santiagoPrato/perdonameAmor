@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Me perdonas lu?</title>
   <style>
-    /* Centrar todo vertical y horizontal */
     body, html {
       height: 100%;
       margin: 0;
@@ -82,15 +81,12 @@
     const contenedorBotones = document.getElementById("contenedor-botones");
 
     let scaleSize = 1;
-    let maxScale = 4;  // límite máximo para que no crezca infinito
 
     boton1.addEventListener("click", () => {
-      if (scaleSize < maxScale) {
         scaleSize *= 1.5;
         boton2.style.transform = `scale(${scaleSize})`;
-        // Mover botón "No" para que no se superponga
+        titulo.style.transform = `translateY(-${(scaleSize - 1) * 50}px)`;
         boton1.style.transform = `translateX(-${(scaleSize - 1) * 50}px)`;
-      }
     });
 
     boton2.addEventListener("click", () => {
