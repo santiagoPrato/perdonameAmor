@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Me perdonas lu?</title>
+  <style>
+    .boton {
+      padding: 20px 40px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    #texto {
+      display: none;
+    }
+
+    #gif {
+      display: none;
+      margin-top: 20px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Amor ¿me perdonas?????</h1>
+    <button id="boton1" class="boton">No</button>
+    <button id="boton2" class="boton">Sí</button>
+  </div>
+
+  <br><br>
+  <h2 id="texto">Te amo, sabía que me ibas a perdonar ❤️</h2>
+  <img id="gif" src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="GIF animado">
+
+  <script>
+    const boton1 = document.getElementById("boton1");
+    const boton2 = document.getElementById("boton2");
+    const gif = document.getElementById("gif");
+    const h2 = document.getElementById("texto");
+
+    let size2 = 1;
+
+    boton1.addEventListener("click", () => {
+      size2 *= 2;
+      boton2.style.transform = `scale(${size2})`;
+    });
+
+    boton2.addEventListener("click", () => {
+      gif.style.display = "block";
+      h2.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
